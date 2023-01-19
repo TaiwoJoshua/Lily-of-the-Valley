@@ -111,6 +111,9 @@ $("#hidenav").click(function(){
 var rotate = document.getElementById("rotate");
 deg = 360;
 setInterval(function(){
+  if(deg > 720){
+    deg = 360;
+  }
   rotate.style.transform = "rotateY(" + deg + "deg)";
   deg = (deg + 360);
 }, 5000)
