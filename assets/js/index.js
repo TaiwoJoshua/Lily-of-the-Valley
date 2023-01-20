@@ -112,7 +112,11 @@ var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
-
+    document.querySelector(".nav2>ul").style.top = "-" + navbarh;
+    document.getElementById("hidenav").style.top = "-31px";
+    setTimeout(function(){
+      document.getElementById("shownav").style.top = "0px";
+    }, 500); 
   } else {
     document.querySelector(".nav2>ul").style.top = "-" + navbarh;
     document.getElementById("hidenav").style.top = "-31px";
