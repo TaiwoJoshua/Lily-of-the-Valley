@@ -318,6 +318,7 @@ main>section:nth-child(even){
 .month{
     width: 100%;
     text-align: center;
+    color: white;
     background-color: #00bb51;
 }
 .sunday{
