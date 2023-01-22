@@ -201,6 +201,7 @@ main>section:nth-child(even){
 .about>div{
     padding: 0 20px;
     height: 100vh;
+    min-height: 500px;
     max-height: 600px;
     overflow-y: hidden;
 }
