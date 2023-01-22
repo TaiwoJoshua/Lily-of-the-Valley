@@ -100,6 +100,9 @@ h2{
 .logo>div>div>p{
     font-size: 20px;
 }
+marquee>i{
+    letter-spacing: 5px;
+}
 
 /* Navbar Section */
 #shownav, #hidenav{
