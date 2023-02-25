@@ -6,43 +6,38 @@ function getNextDayOfTheWeek(dayName, excludeToday = true, refDate = new Date())
   return refDate;
 }
 
-Sun = getNextDayOfTheWeek("Sunday", false).toString();
-Sun = Sun.slice(8,10);
+Sun = getNextDayOfTheWeek("Sunday", false);
+Sunday = Sun.toString().slice(8,10);
 
-Mon = getNextDayOfTheWeek("Monday", false).toString();
-Mon = Mon.slice(8,10);
+Mon = getNextDayOfTheWeek("Monday", false);
+Monday = Mon.toString().slice(8,10);
 
-Tues = getNextDayOfTheWeek("Tuesday", false).toString();
-Tues = Tues.slice(8,10);
+Tues = getNextDayOfTheWeek("Tuesday", false);
+Tuesday = Tues.toString().slice(8,10);
 
-Thur = getNextDayOfTheWeek("Thursday", false).toString();
-Thur = Thur.slice(8,10);
-
-var curr = new Date();
-var Sunday = new Date(curr.setDate(curr.getDate() - curr.getDay()));
-var Monday = new Date(curr.setDate(curr.getDate() - curr.getDay()+1));
-var Tuesday = new Date(curr.setDate(curr.getDate() - curr.getDay()+2));
-var Thursday = new Date(curr.setDate(curr.getDate() - curr.getDay()+4));
+Thur = getNextDayOfTheWeek("Thursday", false);
+Thursday = Thur.toString().slice(8,10);
 
 month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 day = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-$(".sunday>div>div>.month").text(month[Sunday.getMonth()]);
-$(".sunday>div>div>.day").text(day[Sunday.getDay()]);
-$(".sunday>div>div>.date").text(Sun);
+$(".sunday>div>div>.month").text(month[Sun.getMonth()]);
+$(".sunday>div>div>.day").text(day[Sun.getDay()]);
+$(".sunday>div>div>.date").text(Sunday);
 
-$(".monday>div>div>.month").text(month[Monday.getMonth()]);
-$(".monday>div>div>.day").text(day[Monday.getDay()]);
-$(".monday>div>div>.date").text(Mon);
+$(".monday>div>div>.month").text(month[Mon.getMonth()]);
+$(".monday>div>div>.day").text(day[Mon.getDay()]);
+$(".monday>div>div>.date").text(Monday);
 
-$(".tuesday>div>div>.month").text(month[Tuesday.getMonth()]);
-$(".tuesday>div>div>.day").text(day[Tuesday.getDay()]);
-$(".tuesday>div>div>.date").text(Tues);
+$(".tuesday>div>div>.month").text(month[Tues.getMonth()]);
+$(".tuesday>div>div>.day").text(day[Tues.getDay()]);
+$(".tuesday>div>div>.date").text(Tuesday);
 
-$(".thursday>div>div>.month").text(month[Thursday.getMonth()]);
-$(".thursday>div>div>.day").text(day[Thursday.getDay()]);
-$(".thursday>div>div>.date").text(Thur);
+$(".thursday>div>div>.month").text(month[Thur.getMonth()]);
+$(".thursday>div>div>.day").text(day[Thur.getDay()]);
+$(".thursday>div>div>.date").text(Thursday);
 
+curr = new Date();
 $("#year").text(curr.getFullYear());
 
 const span = document.querySelector("#copy");
