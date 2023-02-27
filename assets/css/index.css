@@ -172,7 +172,7 @@ main{
     font-size: 18px;
 }
 main>section:nth-child(even){
-    background-color: #F5F5F5;
+    background-color: rgba(245, 245, 245, 0.6);
 }
 .welcome{
     width: 100%;
@@ -235,6 +235,7 @@ main>section:nth-child(even){
     background-color: green;
     z-index: 1;
     cursor: pointer;
+    text-decoration: none;
 }
 #more::after {
     content: "";
@@ -279,7 +280,8 @@ main>section:nth-child(even){
 .programmes>div>div:nth-child(2)>div, .sunday{
     max-width: 95vw;
     width: 300px;
-    height: 100px;
+    min-height: 100px;
+    height: 150px;
     padding: 10px;
     margin: 10px;
     display: flex;
@@ -298,6 +300,9 @@ main>section:nth-child(even){
     display: flex;
     align-items: center;
 }
+.friday>div.timewrapper>.event>div:nth-child(3){
+    margin-top: 5px;
+}
 .event{
     height: 100%;
     display: flex;
@@ -308,6 +313,7 @@ main>section:nth-child(even){
 .event>strong, .ptitle{
     font-size: 20px;
     margin: 10px 0;
+    text-align: center;
 }
 .datewrapper{
     display: flex;
@@ -321,6 +327,7 @@ main>section:nth-child(even){
 }
 .month{
     width: 100%;
+    min-width: 80px;
     text-align: center;
     color: white;
     background-color: #00bb51;
@@ -431,7 +438,7 @@ hr{
 .bankinfo{
     display: flex;
     flex-direction: column;
-    background-color: #F7F7F7;
+    background-color: rgba(247, 247, 247, 0.7);
     border: 1px solid #69be8e;
     border-radius: 10px;
     padding: 20px;
@@ -462,6 +469,63 @@ hr{
     display: none;
 }
 
+/* Contact Section */
+.contact{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.input{
+    padding: 12px;
+    margin: 15px;
+    width: 30%;
+    border: 2px solid #69be8e;
+    outline: none;
+    background-color: transparent;
+}
+#msg{
+    width: 20%;
+    padding: 10px;
+    margin: 15px;
+    border: 2px solid #69be8e;
+    resize: none;
+    outline: none;
+    background-color: transparent;
+}
+#send{
+    padding: 10px;
+    width: 10%;
+    border: 2px solid #69be8e;
+    outline: none;
+    text-align: center;
+    background-color: #69be8e;
+    color: white;
+    transition: all 300ms ease-in-out;
+}
+#send:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px #00bb51;
+    background-color: white;
+    color: #69be8e;
+}
+a{
+    color: #00bb51;
+}
+a:hover{
+    text-decoration: underline;
+}
+
 /* Footer */
 footer{
     width: 100%;
@@ -476,6 +540,26 @@ footer>a{
 
 /* Media Query */
 /* Phones */
+@media screen and (max-width: 1023px){
+    .programmes>div{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 800px){
+    /* Contact */
+    .input{
+        width: 60%;
+    }
+    #msg{
+        width: 55%;
+    }
+    #send{
+        width: 20%;
+    }
+}
+
 @media screen and (max-width: 640px){
     .logo>div>img{
         width: 100px;
@@ -499,6 +583,17 @@ footer>a{
     }
     .fotorama{
         width: 100%;
+    }
+
+    /* Contact */
+    .input, #file{
+        width: 80%;
+    }
+    #msg{
+        width: 70%;
+    }
+    #send{
+        width: 20%;
     }
 }
 

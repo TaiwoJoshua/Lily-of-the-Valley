@@ -18,6 +18,14 @@ Tuesday = Tues.toString().slice(8,10);
 Thur = getNextDayOfTheWeek("Thursday", false);
 Thursday = Thur.toString().slice(8,10);
 
+Fri = getNextDayOfTheWeek("Friday", false);
+Friday = Fri.toString().slice(8,10);
+
+// Exclude First Fridays
+if(parseInt(Friday) < 7){
+  Friday = parseInt(Friday) + 7;
+}
+
 month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 day = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
@@ -36,6 +44,10 @@ $(".tuesday>div>div>.date").text(Tuesday);
 $(".thursday>div>div>.month").text(month[Thur.getMonth()]);
 $(".thursday>div>div>.day").text(day[Thur.getDay()]);
 $(".thursday>div>div>.date").text(Thursday);
+
+$(".friday>div>div>.month").text(month[Fri.getMonth()]);
+$(".friday>div>div>.day").text(day[Fri.getDay()]);
+$(".friday>div>div>.date").text(Friday);
 
 curr = new Date();
 $("#year").text(curr.getFullYear());
